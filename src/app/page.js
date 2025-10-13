@@ -1,103 +1,188 @@
-import Image from "next/image";
+// app/page.js
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div>
+      {/* === PAGE WAVE FADE - TÜM SAYFANIN ORTASINDA === */}
+      <div className='page-wave-fade'>
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src='/PageWaveFade.png'
+          alt='Sayfa Geçiş Dalgası'
+          fill
+          style={{ objectFit: 'cover' }}
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* === İLK SAYFA - HERO SECTION === */}
+      <section className='hero-section'>
+        {/* Arkaplan Resmi */}
+        <div className='hero-background'>
+          <Image
+            src='/Background.png'
+            alt='Türkiye Arkaplan'
+            fill
+            priority
+            quality={100}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        {/* Renk Overlay */}
+        <div className='hero-overlay'></div>
+
+        {/* FLOATING ELEMENTS - DEV BOYUTLAR */}
+        <div className='floating-elements'>
+          {/* SOL CAMİ - DEV BOYUT */}
+          <div className='floating-element left-mosque'>
+            <Image
+              src='/LeftMosque.png'
+              alt='Sol Cami'
+              width={700}
+              height={800}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+
+          {/* Türk Bayrağı - DEV BOYUT ORTADA */}
+          <div className='floating-element turkish-flag'>
+            <Image
+              src='/TurkishFlag.png'
+              alt='Türk Bayrağı'
+              width={800}
+              height={900}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+
+          {/* GALATA KULESİ - DEV BOYUT ORTADA */}
+          <div className='floating-element galata-tower'>
+            <Image
+              src='/Galata.png'
+              alt='Galata Kulesi'
+              width={800}
+              height={900}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+
+          {/* SAĞ CAMİ - DEV BOYUT */}
+          <div className='floating-element right-mosque'>
+            <Image
+              src='/RightMosque.png'
+              alt='Sağ Cami'
+              width={850}
+              height={780}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        </div>
+
+        {/* ANA İÇERİK */}
+        <div className='hero-content'>
+          {/* TurkishWay Logo - ORTADA */}
+          <div className='turkishway-logo'>
+            <Image
+              src='/TurkishWay.png'
+              alt='TurkishWay'
+              width={600}
+              height={150}
+              style={{ width: '100%', height: 'auto' }}
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* === İKİNCİ SAYFA - LIVE WITH TÜRKİYE === */}
+      <section id='about' className='second-page'>
+        {/* Arkaplan Resmi */}
+        <div className='second-page-bg'>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src='/Page2BG.png'
+            alt='İkinci Sayfa Arkaplan'
+            fill
+            priority
+            quality={100}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+
+        <div className='second-page-content'>
+          {/* SOL TARAF: Live with Türkiye ve Yazı */}
+          <div className='live-with-turkiye'>
+            {/* Live with Türkiye Logo */}
+            <div className='live-with-turkiye-logo'>
+              <Image
+                src='/LiveWithTurkiye.png'
+                alt='Live with Türkiye'
+                width={400}
+                height={100}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
+
+            {/* Yazı Bölümü */}
+            <div className='live-with-turkiye-text'>
+              <p>
+                Turkiye is a country that bridges Europe and Asia, carrying a
+                long and diverse history. From the ancient Hittite civilization
+                to the Byzantine Empire and the Ottoman period, it has been a
+                crossroads of cultures for centuries. Modern Turkiye was founded
+                in 1923 under Mustafa Kemal Atatürk, who introduced deep reforms
+                in politics, education, and culture. Today the country reflects
+                both tradition and modernity. The official language is Turkish,
+                though Kurdish and other minority languages are also spoken in
+                different regions. Turkiye&apos;s population is around 85
+                million people, with Istanbul being the largest city, though
+                Ankara serves as the capital. The country covers an area of
+                about 783,000 square kilometers, making it one of the largest in
+                the region. Its culture is a rich blend of East and West, where
+                Islamic heritage meets Mediterranean influences. Turkish
+                cuisine, known for kebabs, baklava, and strong tea, plays a
+                vital role in everyday life. Art, music, and dance traditions
+                highlight both local and global creativity. Hospitality remains
+                a key value, and family ties are central to social structure.
+                Over centuries, Turkiye has balanced its role as a historical
+                empire and a modern republic, offering a unique perspective on
+                culture, identity, and geography.
+              </p>
+            </div>
+          </div>
+
+          {/* SAĞ TARAF: Balonlar ve Video */}
+          <div className='right-content'>
+            {/* Balonlar */}
+            <div className='baloons-section'>
+              <Image
+                src='/Baloons.png'
+                alt='Balonlar'
+                width={500}
+                height={400}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
+
+            {/* Video Bölümü */}
+            <div className='video-section'>
+              {/* Video Arkaplan */}
+              <div className='video-bg'>
+                <Image
+                  src='/VideoBG.png'
+                  alt='Video Arkaplan'
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+
+              {/* Video Yer Tutucu */}
+              <div className='video-placeholder'>
+                <h3>Video Coming Soon</h3>
+                <p>Amazing video about Türkiye will be here</p>
+                <div style={{ marginTop: '1rem', fontSize: '2rem' }}>🎥</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

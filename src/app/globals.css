@@ -1,26 +1,358 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* app/globals.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  color: #333;
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  background-color: transparent;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(52, 61, 71, 0.395);
+  box-shadow: 0 2px 20px rgb(255, 255, 255);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.header.scrolled .nav-link {
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #037ef3;
+}
+
+/* Hero Section - İLK SAYFA (DEĞİŞMEDİ) */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(54, 169, 240, 0.3) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* TurkishWay Logo - Ortada */
+.turkishway-logo {
+  margin-bottom: 15rem;
+  position: relative;
+  z-index: 1;
+}
+
+.turkishway-logo img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.9));
+  z-index: 1;
+}
+
+.floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.floating-element {
+  position: absolute;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6));
+  transition: transform 0.5s ease;
+}
+
+.floating-element:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* SOL CAMİ - DEV BOYUT */
+.left-mosque {
+  left: -100px;
+  bottom: -100px;
+  width: 700px;
+  height: 800px;
+  opacity: 0.9;
+}
+
+.left-mosque img {
+  filter: grayscale(100%) contrast(120%) brightness(80%);
+}
+
+/* GALATA KULESİ - DEV BOYUT ORTADA */
+.galata-tower {
+  left: 54%;
+  bottom: -150px;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 900px;
+  opacity: 1.2;
+  z-index: 1;
+}
+
+/* TÜRK BAYRAĞI - DEV BOYUT ORTADA */
+.turkish-flag {
+  left: 40%;
+  bottom: -150px;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 900px;
+  opacity: 1;
+}
+
+/* SAĞ CAMİ - DEV BOYUT */
+.right-mosque {
+  right: -120px;
+  bottom: -120px;
+  width: 750px;
+  height: 750px;
+  opacity: 0.9;
+}
+
+/* Page Wave Fade */
+.page-wave-fade {
+  position: absolute;
+  bottom: -80;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 5;
+}
+
+.page-wave-fade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === İKİNCİ SAYFA STİLLERİ === */
+
+.second-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-page-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 1;
+}
+
+.second-page-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.second-page-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Live with Türkiye Bölümü - SOL TARAF */
+.live-with-turkiye {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.live-with-turkiye-logo {
+  max-width: 475px;
+  width: 100%;
+}
+
+.live-with-turkiye-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #ffffff;
+  text-align: justify;
+}
+
+/* Balonlar ve Video Bölümü - SAĞ TARAF */
+.right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.baloons-section {
+  text-align: center;
+}
+
+.baloons-section img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.3));
+}
+
+.video-section {
+  position: relative;
+}
+
+.video-bg {
+  position: absolute;
+  top: -60;
+  right: 20;
+  left: 50;
+  width: 85%;
+  height: 200%;
+  z-index: 2;
+}
+
+.video-bg img {
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.video-placeholder {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.video-placeholder h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.video-placeholder p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* İkinci sayfa için wave fade */
+.second-page-wave {
+  position: absolute;
+  bottom: -100;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 3;
+}
+
+.second-page-wave img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
