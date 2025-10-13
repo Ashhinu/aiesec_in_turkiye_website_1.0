@@ -54,8 +54,7 @@ body {
   display: flex;
   gap: 2.5rem;
 }
-/*dememeeeeewwdwdsdsd
-*/
+
 .nav-link {
   color: rgba(255, 255, 255, 0);
   text-decoration: none;
@@ -69,6 +68,8 @@ body {
 .nav-link:hover {
   color: #037ef3;
 }
+
+/*furjkabn */
 
 /* Hero Section - İLK SAYFA (DEĞİŞMEDİ) */
 .hero-section {
