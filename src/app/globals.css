@@ -51,7 +51,7 @@ body {
 }
 
 .nav-link {
-  color: white;
+  color: rgba(255, 255, 255, 0);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -60,13 +60,11 @@ body {
   transition: color 0.3s ease;
 }
 
-.header.scrolled .nav-link {
-  color: #ffffff;
-}
-
 .nav-link:hover {
   color: #037ef3;
 }
+
+/*furjkabn */
 
 /* Hero Section - İLK SAYFA (DEĞİŞMEDİ) */
 .hero-section {
