@@ -92,7 +92,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* === İKİNCİ SAYFA - LIVE WITH TÜRKİYE === */}
       <section id='about' className='second-page'>
         {/* Arkaplan Resmi */}
