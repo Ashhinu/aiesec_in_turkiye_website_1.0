@@ -182,6 +182,155 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* === ÜÇÜNCÜ SAYFA - OUR PROGRAMS === */}
+      <section id='programs' style={{ position: 'relative', padding: '120px 2rem 0px', overflow: 'hidden' }}>
+         {/* Vertical background pattern */}
+         <div
+           style={{
+             position: 'absolute',
+             inset: 0,
+             display: 'flex',
+             flexDirection: 'column',
+             zIndex: 1
+           }}
+         >
+           {/* First third - EP PHOTO (3) 1 */}
+           <div
+             style={{
+               width: '100%',
+               height: '33.33%',
+               backgroundImage: "url('/EP PHOTO (3) 1.png')",
+               backgroundRepeat: 'no-repeat',
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+               opacity: 0.6
+             }}
+           />
+           {/* Second third - EP PHOTO (3) 2 */}
+           <div
+             style={{
+               width: '100%',
+               height: '33.33%',
+               backgroundImage: "url('/EP PHOTO (3) 2.png')",
+               backgroundRepeat: 'no-repeat',
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+               opacity: 0.6
+             }}
+           />
+           {/* Third third - EP PHOTO (3) 1 */}
+           <div
+             style={{
+               width: '100%',
+               height: '33.33%',
+               backgroundImage: "url('/EP PHOTO (3) 1.png')",
+               backgroundRepeat: 'no-repeat',
+               backgroundSize: 'cover',
+               backgroundPosition: 'center',
+               opacity: 0.6
+             }}
+           />
+         </div>
+         {/* EP PHOTO SVG background behind buttons */}
+         <div
+           style={{
+             position: 'absolute',
+             top: 0,
+             left: 0,
+             width: '100%',
+             height: '100%',
+             backgroundImage: "url('/EP PHOTO (1).svg')",
+             backgroundRepeat: 'no-repeat',
+             backgroundSize: 'cover',
+             backgroundPosition: 'center',
+             opacity: 0.8,
+             zIndex: 2
+           }}
+         />
+         {/* Dark vignette overlay */}
+         <div
+           style={{
+             position: 'absolute',
+             inset: 0,
+             background:
+               'radial-gradient(100% 60% at 50% 60%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.65) 100%)',
+             zIndex: 3
+           }}
+         />
+
+        <div style={{ position: 'relative', zIndex: 4, maxWidth: 1400, margin: '0 auto' }}>
+          {/* Section title image */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
+            <Image src='/our programs.png' alt='Our programs' width={360} height={80} style={{ width: '100%', maxWidth: 360, height: 'auto' }} />
+          </div>
+
+          {/* Cards grid */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '1.5rem'
+            }}
+          >
+            {/* Top row - two buttons */}
+            <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
+              {/* Global Volunteer */}
+              <div
+                style={{
+                  background: '#ffffff',
+                  borderRadius: 20,
+                  padding: 0,
+                  width: '300px',
+                  height: '150px'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                  <Image src='/GV.png' alt='Global Volunteer' width={300} height={200} style={{ width: '100%', height: 'auto' }} />
+                </div>
+              </div>
+
+              {/* Global Talent */}
+              <div
+                style={{
+                  background: '#ffffff',
+                  borderRadius: 20,
+                  padding: 0,
+                  width: '300px',
+                  height: '150px'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                  <Image src='/GTA.png' alt='Global Talent' width={300} height={200} style={{ width: '100%', height: 'auto' }} />
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom row - one centered button */}
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              {/* Global Teacher */}
+              <div
+                style={{
+                  background: '#ffffff',
+                  borderRadius: 20,
+                  padding: 0,
+                  width: '300px',
+                  height: '150px'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                  <Image src='/GTE.png' alt='Global Teacher' width={300} height={200} style={{ width: '100%', height: 'auto' }} />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer image */}
+          <div style={{ textAlign: 'center', marginTop: 200,  marginBottom: 20 }}>
+            <Image src='/Group 3.png' alt='AIESEC in Türkiye' width={400} height={120} style={{ width: 'auto', height: 'auto', maxWidth: 600 }} />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
