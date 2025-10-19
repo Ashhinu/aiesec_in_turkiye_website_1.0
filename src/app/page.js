@@ -1,5 +1,6 @@
 // app/page.js
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -276,52 +277,61 @@ export default function Home() {
             {/* Top row - two buttons */}
             <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
               {/* Global Volunteer */}
-              <div
-                style={{
-                  background: '#ffffff',
-                  borderRadius: 20,
-                  padding: 0,
-                  width: '300px',
-                  height: '150px'
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                  <Image src='/GV.png' alt='Global Volunteer' width={300} height={200} style={{ width: '100%', height: 'auto' }} />
+              <Link href='/' style={{ textDecoration: 'none' }}> /* Global Volunteer Page */
+                <div
+                  style={{
+                    background: '#ffffff',
+                    borderRadius: 20,
+                    padding: 0,
+                    width: '300px',
+                    height: '150px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                    <Image src='/GV.png' alt='Global Volunteer' width={300} height={200} style={{ width: '100%', height: 'auto' }} />
+                  </div>
                 </div>
-              </div>
+              </Link>
 
               {/* Global Talent */}
-              <div
-                style={{
-                  background: '#ffffff',
-                  borderRadius: 20,
-                  padding: 0,
-                  width: '300px',
-                  height: '150px'
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                  <Image src='/GTA.png' alt='Global Talent' width={300} height={200} style={{ width: '100%', height: 'auto' }} />
+              <Link href='/' style={{ textDecoration: 'none' }}> /* Global Talent Page */
+                <div
+                  style={{
+                    background: '#ffffff',
+                    borderRadius: 20,
+                    padding: 0,
+                    width: '300px',
+                    height: '150px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                    <Image src='/GTA.png' alt='Global Talent' width={300} height={200} style={{ width: '100%', height: 'auto' }} />
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             {/* Bottom row - one centered button */}
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               {/* Global Teacher */}
-              <div
-                style={{
-                  background: '#ffffff',
-                  borderRadius: 20,
-                  padding: 0,
-                  width: '300px',
-                  height: '150px'
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                  <Image src='/GTE.png' alt='Global Teacher' width={300} height={200} style={{ width: '100%', height: 'auto' }} />
+              <Link href='/' style={{ textDecoration: 'none' }}>
+                <div
+                  style={{
+                    background: '#ffffff',
+                    borderRadius: 20,
+                    padding: 0,
+                    width: '300px',
+                    height: '150px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                    <Image src='/GTE.png' alt='Global Teacher' width={300} height={200} style={{ width: '100%', height: 'auto' }} />
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
 
