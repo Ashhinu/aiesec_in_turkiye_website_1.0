@@ -277,7 +277,7 @@ export default function Home() {
             {/* Top row - two buttons */}
             <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
               {/* Global Volunteer */}
-              <Link href='/' style={{ textDecoration: 'none' }}> /* Global Volunteer Page */
+              <Link href='/' style={{ textDecoration: 'none' }}> 
                 <div
                   style={{
                     background: '#ffffff',
@@ -295,7 +295,7 @@ export default function Home() {
               </Link>
 
               {/* Global Talent */}
-              <Link href='/' style={{ textDecoration: 'none' }}> /* Global Talent Page */
+              <Link href='/' style={{ textDecoration: 'none' }}> 
                 <div
                   style={{
                     background: '#ffffff',
