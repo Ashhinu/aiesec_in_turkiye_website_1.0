@@ -1,7 +1,42 @@
 // app/page.js
+'use client';
+
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // 2.5 saniye sonra loading ekranını kaldır
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Loading ekranı
+  if (isLoading) {
+    return (
+      <div className='loading-screen'>
+        <div className='loading-content'>
+          <div className='logo-container'>
+            <Image
+              src='/EnterenceAnimation.png'
+              alt='Yükleniyor'
+              width={300}
+              height={150}
+              className='loading-logo'
+              priority
+            />
+            <div className='loading-bar'></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div>
       {/* === PAGE WAVE FADE - TÜM SAYFANIN ORTASINDA === */}
@@ -92,6 +127,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* === İKİNCİ SAYFA - LIVE WITH TÜRKİYE === */}
       <section id='about' className='second-page'>
         {/* Arkaplan Resmi */}
