@@ -456,3 +456,89 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+/* === PAGE WAVE FADE 2 - 2. SAYFADAN 3. SAYFAYA GEÇİŞ === */
+.page-wave-fade-2 {
+  position: absolute;
+  bottom: -850px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 5;
+}
+
+.page-wave-fade-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === DROPDOWN STYLES === */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.header.scrolled .dropdown-toggle {
+  color: #ffffff;
+}
+
+.dropdown-toggle:hover {
+  color: #037ef3;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  animation: fadeIn 0.3s ease;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background: rgba(54, 169, 240, 0.1);
+  color: #037ef3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

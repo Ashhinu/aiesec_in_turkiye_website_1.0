@@ -8,6 +8,7 @@ import Link from 'next/link';
 
 export default function RootLayout({ children }) {
   const [scrolled, setScrolled] = useState(false);
+  const [productsDropdown, setProductsDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,9 +39,28 @@ export default function RootLayout({ children }) {
 
             {/* Navigasyon Linkleri */}
             <div className='nav-links'>
-              <a href='#products' className='nav-link'>
-                products
-              </a>
+              {/* Products Dropdown */}
+              <div
+                className='nav-dropdown'
+                onMouseEnter={() => setProductsDropdown(true)}
+                onMouseLeave={() => setProductsDropdown(false)}
+              >
+                <button className='nav-link dropdown-toggle'>products</button>
+                {productsDropdown && (
+                  <div className='dropdown-menu'>
+                    <Link href='/global-volunteer' className='dropdown-item'>
+                      Global Volunteer
+                    </Link>
+                    <Link href='/global-talent' className='dropdown-item'>
+                      Global Talent
+                    </Link>
+                    <Link href='/global-teacher' className='dropdown-item'>
+                      Global Teacher
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               <a href='#about' className='nav-link'>
                 about Türkiye
               </a>
