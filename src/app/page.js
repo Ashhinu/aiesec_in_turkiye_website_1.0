@@ -231,153 +231,58 @@ export default function Home() {
       </div>
 
       {/* === ÜÇÜNCÜ SAYFA - OUR PROGRAMS === */}
-      <section
-        id='programs'
-        style={{
-          position: 'relative',
-          padding: '120px 2rem 0px',
-          overflow: 'hidden',
-        }}
-      >
+      <section id='programs' className='our-programs-section'>
         {/* Vertical background pattern */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            display: 'flex',
-            flexDirection: 'column',
-            zIndex: 1,
-          }}
-        >
-          {/* First third - EP PHOTO (3) 1 */}
+        <div className='programs-background-pattern'>
           <div
-            style={{
-              width: '100%',
-              height: '33.33%',
-              backgroundImage: "url('/EP PHOTO (3) 1.png')",
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              opacity: 0.6,
-            }}
+            className='programs-bg-layer'
+            style={{ backgroundImage: "url('/EP PHOTO (3) 1.png')" }}
           />
-          {/* Second third - EP PHOTO (3) 2 */}
           <div
-            style={{
-              width: '100%',
-              height: '33.33%',
-              backgroundImage: "url('/EP PHOTO (3) 2.png')",
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              opacity: 0.6,
-            }}
+            className='programs-bg-layer'
+            style={{ backgroundImage: "url('/EP PHOTO (3) 2.png')" }}
           />
-          {/* Third third - EP PHOTO (3) 1 */}
           <div
-            style={{
-              width: '100%',
-              height: '33.33%',
-              backgroundImage: "url('/EP PHOTO (3) 1.png')",
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              opacity: 0.6,
-            }}
+            className='programs-bg-layer'
+            style={{ backgroundImage: "url('/EP PHOTO (3) 1.png')" }}
           />
         </div>
+
         {/* EP PHOTO SVG background behind buttons */}
         <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundImage: "url('/EP PHOTO (1).svg')",
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.8,
-            zIndex: 2,
-          }}
-        />
-        {/* Dark vignette overlay */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background:
-              'radial-gradient(100% 60% at 50% 60%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.65) 100%)',
-            zIndex: 3,
-          }}
+          className='programs-svg-bg'
+          style={{ backgroundImage: "url('/EP PHOTO (1).svg')" }}
         />
 
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 4,
-            maxWidth: 1400,
-            margin: '0 auto',
-          }}
-        >
+        {/* Dark vignette overlay */}
+        <div className='programs-vignette' />
+
+        <div className='programs-container'>
           {/* Section title image */}
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              marginBottom: 32,
-            }}
-          >
+          <div className='programs-title'>
             <Image
               src='/our programs.png'
               alt='Our programs'
               width={360}
               height={80}
-              style={{ width: '100%', maxWidth: 360, height: 'auto' }}
+              className='programs-title-image'
             />
           </div>
 
           {/* Cards grid */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '1.5rem',
-            }}
-          >
+          <div className='programs-grid'>
             {/* Top row - two buttons */}
-            <div
-              style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}
-            >
+            <div className='programs-row'>
               {/* Global Volunteer */}
               <Link href='/global-volunteer' style={{ textDecoration: 'none' }}>
-                <div
-                  style={{
-                    background: '#ffffff',
-                    borderRadius: 20,
-                    padding: 0,
-                    width: '300px',
-                    height: '150px',
-                    cursor: 'pointer',
-                    transition: 'transform 0.3s ease',
-                  }}
-                >
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      height: '100%',
-                    }}
-                  >
+                <div className='programs-button'>
+                  <div className='programs-button-content'>
                     <Image
                       src='/GV.png'
                       alt='Global Volunteer'
                       width={300}
                       height={200}
-                      style={{ width: '100%', height: 'auto' }}
+                      className='programs-button-image'
                     />
                   </div>
                 </div>
@@ -385,30 +290,14 @@ export default function Home() {
 
               {/* Global Talent */}
               <Link href='/global-talent' style={{ textDecoration: 'none' }}>
-                <div
-                  style={{
-                    background: '#ffffff',
-                    borderRadius: 20,
-                    padding: 0,
-                    width: '300px',
-                    height: '150px',
-                    cursor: 'pointer',
-                  }}
-                >
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      height: '100%',
-                    }}
-                  >
+                <div className='programs-button'>
+                  <div className='programs-button-content'>
                     <Image
                       src='/GTA.png'
                       alt='Global Talent'
                       width={300}
                       height={200}
-                      style={{ width: '100%', height: 'auto' }}
+                      className='programs-button-image'
                     />
                   </div>
                 </div>
@@ -416,33 +305,17 @@ export default function Home() {
             </div>
 
             {/* Bottom row - one centered button */}
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className='programs-row'>
               {/* Global Teacher */}
               <Link href='/global-teacher' style={{ textDecoration: 'none' }}>
-                <div
-                  style={{
-                    background: '#ffffff',
-                    borderRadius: 20,
-                    padding: 0,
-                    width: '300px',
-                    height: '150px',
-                    cursor: 'pointer',
-                  }}
-                >
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      height: '100%',
-                    }}
-                  >
+                <div className='programs-button'>
+                  <div className='programs-button-content'>
                     <Image
                       src='/GTE.png'
                       alt='Global Teacher'
                       width={300}
                       height={200}
-                      style={{ width: '100%', height: 'auto' }}
+                      className='programs-button-image'
                     />
                   </div>
                 </div>
@@ -451,15 +324,13 @@ export default function Home() {
           </div>
 
           {/* Footer image */}
-          <div
-            style={{ textAlign: 'center', marginTop: 200, marginBottom: 20 }}
-          >
+          <div className='programs-footer'>
             <Image
               src='/Group 3.png'
               alt='AIESEC in Türkiye'
               width={400}
               height={120}
-              style={{ width: 'auto', height: 'auto', maxWidth: 600 }}
+              className='programs-footer-image'
             />
           </div>
         </div>

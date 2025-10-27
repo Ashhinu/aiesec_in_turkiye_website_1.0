@@ -542,3 +542,125 @@ body {
     transform: translateY(0);
   }
 }
+
+/* app/globals.css - YENİ EKLENEN STİLLER */
+
+/* === OUR PROGRAMS SECTION STYLES === */
+.our-programs-section {
+  position: relative;
+  padding: 120px 2rem 0px;
+  overflow: hidden;
+}
+
+.programs-background-pattern {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.programs-bg-layer {
+  width: 100%;
+  height: 33.33%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+}
+
+.programs-svg-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.programs-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    100% 60% at 50% 60%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  z-index: 3;
+}
+
+.programs-container {
+  position: relative;
+  z-index: 4;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.programs-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.programs-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.programs-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.programs-button {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 0;
+  width: 400px;
+  height: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.programs-button:hover {
+  transform: scale(1.05);
+}
+
+.programs-button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.programs-footer {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 20px;
+}
+
+/* Programs section image styles */
+.programs-title-image {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+
+.programs-button-image {
+  width: 100%;
+  height: auto;
+}
+
+.programs-footer-image {
+  width: auto;
+  height: auto;
+  max-width: 600px;
+}
