@@ -1,3 +1,6 @@
+/* app/global-volunteer/styles.css */
+
+/* === GENEL SECTION STİLLERİ === */
 .gv-section {
   position: relative;
   height: 100vh;
@@ -32,14 +35,14 @@
   height: auto;
 }
 
-/* === PAGE WAVE FADE STİLLERİ */
+/* === PAGE WAVE FADE STİLLERİ === */
 .gv-wave-fade {
   position: absolute;
-  bottom: -80px;
+  bottom: -85px;
   left: 0;
   width: 100%;
-  height: 150px;
-  z-index: 5;
+  height: 180px;
+  z-index: 10;
   pointer-events: none;
 }
 

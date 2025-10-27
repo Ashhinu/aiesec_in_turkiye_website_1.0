@@ -1,17 +1,17 @@
 // app/global-volunteer/page.js
 import Image from 'next/image';
 import Link from 'next/link';
-import './styles.css'; // CSS dosyasını import et
+import './styles.css';
 
 export default function GlobalVolunteer() {
   return (
     <div>
-      {/* === BİRİNCİ BÖLÜM - GVBG1.png === */}
+      {/* === BİRİNCİ BÖLÜM - GVBG1.svg === */}
       <section className='gv-section'>
-        {/* Arkaplan Resmi - GVBG1.png */}
+        {/* Arkaplan Resmi - GVBG1.svg */}
         <div className='gv-background'>
           <Image
-            src='/GVBG1.png'
+            src='/GVBG1.svg'
             alt='Global Volunteer Background 1'
             fill
             style={{ objectFit: 'cover' }}
@@ -42,12 +42,12 @@ export default function GlobalVolunteer() {
         </div>
       </section>
 
-      {/* === İKİNCİ BÖLÜM - GVBG2.png === */}
+      {/* === İKİNCİ BÖLÜM - GVBG2.svg === */}
       <section className='gv-section'>
-        {/* Arkaplan Resmi - GVBG2.png */}
+        {/* Arkaplan Resmi - GVBG2.svg */}
         <div className='gv-background'>
           <Image
-            src='/GVBG2.png'
+            src='/GVBG2.svg'
             alt='Global Volunteer Background 2'
             fill
             style={{ objectFit: 'cover' }}
@@ -65,12 +65,12 @@ export default function GlobalVolunteer() {
         </div>
       </section>
 
-      {/* === ÜÇÜNCÜ BÖLÜM - GVBG3.png === */}
+      {/* === ÜÇÜNCÜ BÖLÜM - GVBG3.svg === */}
       <section className='gv-section'>
-        {/* Arkaplan Resmi - GVBG3.png */}
+        {/* Arkaplan Resmi - GVBG3.svg */}
         <div className='gv-background'>
           <Image
-            src='/GVBG3.png'
+            src='/GVBG3.svg'
             alt='Global Volunteer Background 3'
             fill
             style={{ objectFit: 'cover' }}
