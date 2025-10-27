@@ -1,32 +1,15 @@
 // app/global-volunteer/page.js
 import Image from 'next/image';
 import Link from 'next/link';
+import './styles.css'; // CSS dosyasını import et
 
 export default function GlobalVolunteer() {
   return (
     <div>
       {/* === BİRİNCİ BÖLÜM - GVBG1.png === */}
-      <section
-        style={{
-          position: 'relative',
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          overflow: 'hidden',
-        }}
-      >
+      <section className='gv-section'>
         {/* Arkaplan Resmi - GVBG1.png */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 1,
-          }}
-        >
+        <div className='gv-background'>
           <Image
             src='/GVBG1.png'
             alt='Global Volunteer Background 1'
@@ -37,55 +20,32 @@ export default function GlobalVolunteer() {
         </div>
 
         {/* Global Volunteer Logo - Tam Ortada */}
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 2,
-            textAlign: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+        <div className='gv-hero-container'>
           <Image
             src='/GlobalVolunteer.png'
             alt='Global Volunteer'
-            width={600}
-            height={200}
-            style={{
-              width: '100%',
-              maxWidth: '600px',
-              height: 'auto',
-              filter: 'drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5))',
-            }}
+            width={800}
+            height={400}
+            className='gv-logo'
             priority
+          />
+        </div>
+
+        {/* === PAGE WAVE FADE 1 - 1. BÖLÜMDEN 2. BÖLÜME === */}
+        <div className='gv-wave-fade'>
+          <Image
+            src='/PageWaveFade.png'
+            alt='Sayfa Geçiş Dalgası'
+            fill
+            style={{ objectFit: 'cover' }}
           />
         </div>
       </section>
 
       {/* === İKİNCİ BÖLÜM - GVBG2.png === */}
-      <section
-        style={{
-          position: 'relative',
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          overflow: 'hidden',
-        }}
-      >
+      <section className='gv-section'>
         {/* Arkaplan Resmi - GVBG2.png */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 1,
-          }}
-        >
+        <div className='gv-background'>
           <Image
             src='/GVBG2.png'
             alt='Global Volunteer Background 2'
@@ -93,30 +53,22 @@ export default function GlobalVolunteer() {
             style={{ objectFit: 'cover' }}
           />
         </div>
+
+        {/* === PAGE WAVE FADE 2 - 2. BÖLÜMDEN 3. BÖLÜME === */}
+        <div className='gv-wave-fade'>
+          <Image
+            src='/PageWaveFade.png'
+            alt='Sayfa Geçiş Dalgası'
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
       </section>
 
       {/* === ÜÇÜNCÜ BÖLÜM - GVBG3.png === */}
-      <section
-        style={{
-          position: 'relative',
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          overflow: 'hidden',
-        }}
-      >
+      <section className='gv-section'>
         {/* Arkaplan Resmi - GVBG3.png */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 1,
-          }}
-        >
+        <div className='gv-background'>
           <Image
             src='/GVBG3.png'
             alt='Global Volunteer Background 3'
