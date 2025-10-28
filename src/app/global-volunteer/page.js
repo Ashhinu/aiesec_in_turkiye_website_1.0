@@ -1,6 +1,6 @@
 // app/global-volunteer/page.js
+'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import './styles.css';
 
 export default function GlobalVolunteer() {
@@ -8,7 +8,6 @@ export default function GlobalVolunteer() {
     <div>
       {/* === BİRİNCİ BÖLÜM - GVBG1.svg === */}
       <section className='gv-section'>
-        {/* Arkaplan Resmi - GVBG1.svg */}
         <div className='gv-background'>
           <Image
             src='/GVBG1.svg'
@@ -19,7 +18,6 @@ export default function GlobalVolunteer() {
           />
         </div>
 
-        {/* Global Volunteer Logo - Tam Ortada */}
         <div className='gv-hero-container'>
           <Image
             src='/GlobalVolunteer.png'
@@ -31,7 +29,6 @@ export default function GlobalVolunteer() {
           />
         </div>
 
-        {/* === PAGE WAVE FADE 1 - 1. BÖLÜMDEN 2. BÖLÜME === */}
         <div className='gv-wave-fade'>
           <Image
             src='/PageWaveFade.png'
@@ -44,7 +41,6 @@ export default function GlobalVolunteer() {
 
       {/* === İKİNCİ BÖLÜM - GVBG2.svg === */}
       <section className='gv-section'>
-        {/* Arkaplan Resmi - GVBG2.svg */}
         <div className='gv-background'>
           <Image
             src='/GVBG2.svg'
@@ -54,7 +50,6 @@ export default function GlobalVolunteer() {
           />
         </div>
 
-        {/* === PAGE WAVE FADE 2 - 2. BÖLÜMDEN 3. BÖLÜME === */}
         <div className='gv-wave-fade'>
           <Image
             src='/PageWaveFade.png'
@@ -67,7 +62,6 @@ export default function GlobalVolunteer() {
 
       {/* === ÜÇÜNCÜ BÖLÜM - GVBG3.svg === */}
       <section className='gv-section'>
-        {/* Arkaplan Resmi - GVBG3.svg */}
         <div className='gv-background'>
           <Image
             src='/GVBG3.svg'
@@ -75,6 +69,171 @@ export default function GlobalVolunteer() {
             fill
             style={{ objectFit: 'cover' }}
           />
+        </div>
+
+        {/* === AYRI AYRI BİLEŞENLER === */}
+
+        {/* 1. Find Your Opportunity - EN ÜSTTE */}
+        <div className='gv-title-container'>
+          <Image
+            src='/FindYourOpportunity.png'
+            alt='Find Your Opportunity'
+            width={600}
+            height={150}
+            className='gv-opportunity-title'
+          />
+        </div>
+
+        {/* 2. Filtreleme Butonları - AYRI AYRI */}
+
+        {/* Select City Butonu */}
+        <div className='select-city-button'>
+          <button className='filter-button' type='button'>
+            <Image
+              src='/SelectCity.png'
+              alt='Select City'
+              width={300}
+              height={40}
+            />
+          </button>
+        </div>
+
+        {/* Select Project Butonu */}
+        <div className='select-project-button'>
+          <button className='filter-button' type='button'>
+            <Image
+              src='/SelectProject.png'
+              alt='Select Project'
+              width={300}
+              height={40}
+            />
+          </button>
+        </div>
+
+        {/* Select Dates Butonu */}
+        <div className='select-dates-button'>
+          <button className='filter-button' type='button'>
+            <Image
+              src='/SelectDates.png'
+              alt='Select Dates'
+              width={300}
+              height={40}
+            />
+          </button>
+        </div>
+
+        {/* Search Butonu */}
+        <div className='search-button-container'>
+          <button className='search-button' type='button'>
+            <Image src='/Search.png' alt='Search' width={100} height={30} />
+          </button>
+        </div>
+
+        {/* 3. Project Bileşenleri - ORTA ALAN */}
+        <div className='projects-container'>
+          {/* 1. Project */}
+          <div className='project-item'>
+            <button className='project-button' type='button'>
+              <Image
+                src='/Project.png'
+                alt='Project'
+                width={350}
+                height={200}
+                className='project-image'
+              />
+            </button>
+          </div>
+
+          {/* 2. Project */}
+          <div className='project-item'>
+            <button className='project-button' type='button'>
+              <Image
+                src='/Project.png'
+                alt='Project'
+                width={350}
+                height={200}
+                className='project-image'
+              />
+            </button>
+          </div>
+
+          {/* 3. Project */}
+          <div className='project-item'>
+            <button className='project-button' type='button'>
+              <Image
+                src='/Project.png'
+                alt='Project'
+                width={350}
+                height={200}
+                className='project-image'
+              />
+            </button>
+          </div>
+
+          {/* 4. Project */}
+          <div className='project-item'>
+            <button className='project-button' type='button'>
+              <Image
+                src='/Project.png'
+                alt='Project'
+                width={350}
+                height={200}
+                className='project-image'
+              />
+            </button>
+          </div>
+
+          {/* 5. Project */}
+          <div className='project-item'>
+            <button className='project-button' type='button'>
+              <Image
+                src='/Project.png'
+                alt='Project'
+                width={350}
+                height={200}
+                className='project-image'
+              />
+            </button>
+          </div>
+
+          {/* 6. Project */}
+          <div className='project-item'>
+            <button className='project-button' type='button'>
+              <Image
+                src='/Project.png'
+                alt='Project'
+                width={350}
+                height={200}
+                className='project-image'
+              />
+            </button>
+          </div>
+        </div>
+
+        {/* 4. Navigasyon Butonları - AYRI AYRI */}
+
+        {/* Previous Page Butonu - SOL ALT */}
+        <div className='previous-page-button'>
+          <button className='nav-button' type='button'>
+            <Image
+              src='/PreviousPage.png'
+              alt='Previous Page'
+              width={150}
+              height={40}
+            />
+          </button>
+        </div>
+
+        {/* Next Page Butonu - SAĞ ALT */}
+        <div className='next-page-button'>
+          <button className='nav-button' type='button'>
+            <Image
+              src='/NextPage.png'
+              alt='Next Page'
+              width={150}
+              height={40}
+            />
+          </button>
         </div>
       </section>
     </div>
