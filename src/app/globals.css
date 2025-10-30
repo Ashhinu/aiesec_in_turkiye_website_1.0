@@ -16,6 +16,87 @@ body {
   color: #333;
 }
 
+/* === LOADING SCREEN STYLES === */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.loading-logo {
+  width: 500px;
+  height: 300px;
+  object-fit: contain;
+  opacity: 0;
+  animation: slideInFromLeft 1.5s ease-out 0.5s forwards,
+    fadeIn 1.5s ease-out 0.5s forwards;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
+}
+
+/* Loading Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loadingSweep {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Loading screen fade out */
+.loading-screen {
+  animation: fadeOut 0.8s ease-in-out 2.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 /* Header Styles */
 .header {
   position: fixed;
@@ -33,8 +114,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
-/**/
 
 .logo {
   width: 50px;
@@ -279,38 +358,54 @@ body {
 .right-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem; /* Gap'ı biraz azalttık */
+  align-items: center;
+  justify-content: center;
 }
 
 .baloons-section {
   text-align: center;
+  margin-bottom: -10px; /* Balonları daha aşağı indirmek için */
+  z-index: 3;
+  position: relative;
 }
 
 .baloons-section img {
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
+  transform: translateY(10px); /* Balonları biraz daha aşağı kaydır */
 }
 
+/* Video Bölümü - RESMİ AŞAĞI İNDİR */
 .video-section {
   position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .video-bg {
   position: absolute;
-  top: -60;
-  right: 20;
-  left: 50;
-  width: 85%;
-  height: 200%;
-  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* Yüksekliği artırdık */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Üstten hizala */
 }
 
 .video-bg img {
-  width: 75%;
-  height: 75%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center 30%; /* Resmi %30 aşağı kaydır */
 }
 
 .video-placeholder {
@@ -328,14 +423,22 @@ body {
 }
 
 .video-placeholder h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
   font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .video-placeholder p {
   font-size: 1rem;
   opacity: 0.9;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-placeholder div {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 /* İkinci sayfa için wave fade */
@@ -352,4 +455,212 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* === PAGE WAVE FADE 2 - 2. SAYFADAN 3. SAYFAYA GEÇİŞ === */
+.page-wave-fade-2 {
+  position: absolute;
+  bottom: -850px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 5;
+}
+
+.page-wave-fade-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === DROPDOWN STYLES === */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.header.scrolled .dropdown-toggle {
+  color: #ffffff;
+}
+
+.dropdown-toggle:hover {
+  color: #037ef3;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  animation: fadeIn 0.3s ease;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background: rgba(54, 169, 240, 0.1);
+  color: #037ef3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* app/globals.css - YENİ EKLENEN STİLLER */
+
+/* === OUR PROGRAMS SECTION STYLES === */
+.our-programs-section {
+  position: relative;
+  padding: 120px 2rem 0px;
+  overflow: hidden;
+}
+
+.programs-background-pattern {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.programs-bg-layer {
+  width: 100%;
+  height: 33.33%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+}
+
+.programs-svg-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.programs-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    100% 60% at 50% 60%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  z-index: 3;
+}
+
+.programs-container {
+  position: relative;
+  z-index: 4;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.programs-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.programs-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.programs-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.programs-button {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 0;
+  width: 400px;
+  height: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.programs-button:hover {
+  transform: scale(1.05);
+}
+
+.programs-button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.programs-footer {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 20px;
+}
+
+/* Programs section image styles */
+.programs-title-image {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+
+.programs-button-image {
+  width: 100%;
+  height: auto;
+}
+
+.programs-footer-image {
+  width: auto;
+  height: auto;
+  max-width: 600px;
 }
