@@ -1,0 +1,258 @@
+/* app/about/about.module.css */
+
+/* === ABOUT TÜRKİYE PAGE STYLES === */
+.aboutTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.aboutSubtitle {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* === WHY TÜRKİYE SECTION STYLES === */
+.whyTurkiyeSection {
+  position: relative;
+  min-height: 100vh;
+  background-color: #494949;
+  padding: 100px 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whyTurkiyeContainer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.whyTurkiyeTitle {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.whyTurkiyeTitle h2 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reasonRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.reasonRowReverse {
+  grid-template-columns: auto 1fr;
+}
+
+.reasonText {
+  max-width: 600px;
+  padding: 0;
+}
+
+.reasonTextLeft {
+  justify-self: start;
+}
+
+.reasonTextRight {
+  justify-self: end;
+  text-align: right;
+}
+
+.reasonText h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.reasonText p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
+.reasonTextRight p {
+  text-align: right;
+}
+
+.highlightText {
+  color: #07bfc9;
+  font-weight: 600;
+}
+
+.reasonImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleImage {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: #07bfc9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(7, 191, 201, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circleImage:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(7, 191, 201, 0.5);
+}
+
+.circlePlaceholder {
+  font-size: 5rem;
+  color: white;
+}
+
+/* === TÜRKİYE HIGHLIGHTS SECTION === */
+.turkiyeHighlightsSection {
+  position: relative;
+  padding: 0px 2rem 0px;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+.highlightsContainer {
+  position: relative;
+  z-index: 4;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.highlightsTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.highlightsTitle h2 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.highlightsTitle p {
+  font-size: 1.2rem;
+  color: white;
+  opacity: 0.9;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.highlightCard {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.highlightCard:hover {
+  transform: translateY(-10px);
+}
+
+.highlightIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.highlightCard h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.highlightCard p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* === RESPONSIVE TASARIM === */
+@media (max-width: 1024px) {
+  .reasonRow,
+  .reasonRowReverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .reasonText {
+    justify-self: center;
+    text-align: center !important;
+  }
+
+  .reasonText p {
+    text-align: center !important;
+  }
+
+  .circleImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circlePlaceholder {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .whyTurkiyeSection {
+    padding: 80px 1rem;
+  }
+
+  .whyTurkiyeTitle h2 {
+    font-size: 2.5rem;
+  }
+
+  .reasonText h3 {
+    font-size: 1.6rem;
+  }
+
+  .reasonText p {
+    font-size: 1rem;
+  }
+
+  .circleImage {
+    width: 160px;
+    height: 160px;
+  }
+
+  .circlePlaceholder {
+    font-size: 3rem;
+  }
+
+  .aboutTitle {
+    font-size: 2.5rem;
+  }
+
+  .aboutSubtitle {
+    font-size: 1.2rem;
+  }
+}

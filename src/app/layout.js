@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
                 )}
               </div>
 
-              <a href='#about' className='nav-link'>
+              <a href='/about' className='nav-link'>
                 about Türkiye
               </a>
             </div>

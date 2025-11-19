@@ -210,8 +210,6 @@ export default function GlobalVolunteer() {
           </div>
         </div>
 
-        {/* 4. Navigasyon Butonları - AYRI AYRI */}
-
         {/* Previous Page Butonu - SOL ALT */}
         <div className='previous-page-button'>
           <button className='nav-button' type='button'>
