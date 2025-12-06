@@ -383,3 +383,36 @@
     padding: 16px;
   }
 }
+/* --- NEW CAROUSEL DOT STYLES (REQUIRED FOR JS LOGIC) --- */
+.gv-carousel-dot {
+    /* Style to match your primary branding (Orange: #F6851F) */
+    background-color: white;
+    border: 2px solid #F6851F;
+    color: #F6851F;
+    border-radius: 50%;
+    width: 40px; /* Smaller than gv-page-btn */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Style for the currently active dot */
+.gv-carousel-dot.active {
+    background-color: #F6851F;
+    color: white;
+    border-color: #F6851F;
+}
+
+/* Style for unavailable slots (to contrast with the filled bars) */
+.gv-slot-bar.gv-slot-empty {
+    background: #ccc; /* Lighter color for empty slots */
+}
+
+.gv-slot-bar.gv-slot-filled {
+    background: #F6851F; /* Use the primary color for filled slots */
+}

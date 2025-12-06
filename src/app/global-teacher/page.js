@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import './styles.css';
 
-const API_URL = "Https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhrHjY3rvXsbe0EL8H-RovNtxcxM7VZwtbryFm30m12xG5cdSkqMMM12untA85NrGW-GyebKipFe6gRE9NvR4t9kvIwiPktAq-2Nnm65-dJtjBL5LTVajPM_tZRzVmgMMzzKzn0dxNPtj2zXmet7QKD2UPJckGjBy0N4gxham0NpNhD8K7MkxT_VR9Pi_-WGjiGgHvkBqzxZ0CeeYfeEIjq7O8rsu_J2eHQsJBgWhMbUzCAx5mLk4Ns0ZAJGwwZRw6JkYLaJ-h-OANTuoeS6tlWml8LFZpDGN-4pcwt&lib=MaWnGEOyC3eVXwH0PYbdQtZdmlDGjJ_fQ";
+const API_URL = "https://script.google.com/macros/s/AKfycbzuG4RU5RIrJrWauY7Neye6mIrKxptpUhrX9sS97NNJUDpfcB4rwwl1Zb_hLeZsfj7S/exec";
 const ITEMS_PER_PAGE = 6; 
 
 // Helper function to convert the array-of-arrays into an array-of-objects
