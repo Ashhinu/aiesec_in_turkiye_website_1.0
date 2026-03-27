@@ -1,7 +1,7 @@
-/* app/global-volunteer/styles.css */
+/* styles.module.css - VOLUNTEER */
 
 /* === GENEL SECTION STİLLERİ === */
-.gv-section {
+.gvSection {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -10,7 +10,7 @@
   justify-content: center;
 }
 
-.gv-background {
+.gvBackground {
   position: absolute;
   top: 0;
   left: 0;
@@ -20,22 +20,22 @@
 }
 
 /* === BİRİNCİ BÖLÜM === */
-.gv-hero-container {
+.gvHeroContainer {
   position: relative;
   z-index: 2;
   text-align: center;
 }
 
-.gv-logo {
+.gvLogo {
   width: 100%;
   max-width: 900px;
   height: auto;
 }
 
 /* === DALGA EFEKTİ === */
-.gv-wave-fade {
+.gvWaveFade {
   position: absolute;
-  bottom: -85px;
+  bottom: -100px;
   left: 0;
   width: 100%;
   height: 180px;
@@ -43,14 +43,14 @@
   pointer-events: none;
 }
 
-.gv-wave-fade img {
+.gvWaveFade img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* === İKİNCİ BÖLÜM - SPLIT LAYOUT === */
-.gv-content-split {
+.gvContentSplit {
   position: relative;
   z-index: 2;
   display: flex;
@@ -64,14 +64,14 @@
   flex: 1;
 }
 
-.gv-text-side {
+.gvTextSide {
   flex: 1;
   max-width: 550px;
   color: #000;
   text-align: left;
 }
 
-.gv-title-image {
+.gvTitleImage {
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -79,20 +79,20 @@
   display: block;
 }
 
-.gv-description {
+.gvDescription {
   font-size: 16px;
   line-height: 1.7;
   color: #2b2b2b;
   margin: 0;
 }
 
-.gv-image-side {
+.gvImageSide {
   flex: 1;
   max-width: 500px;
   text-align: right;
 }
 
-.gv-ep-image {
+.gvEpImage {
   width: 100%;
   max-width: 480px;
   height: auto;
@@ -101,8 +101,8 @@
   transform: rotate(2deg);
 }
 
-/* === ÜÇÜNCÜ BÖLÜM - FIND YOUR OPPORTUNITY (TAM TASARIM) === */
-.gv-opportunity-section {
+/* === ÜÇÜNCÜ BÖLÜM - FIND YOUR OPPORTUNITY === */
+.gvOpportunitySection {
   position: relative;
   z-index: 2;
   display: flex;
@@ -115,14 +115,14 @@
   gap: 30px;
 }
 
-.gv-opportunity-title-img {
+.gvOpportunityTitleImg {
   width: 100%;
   max-width: 600px;
   height: auto;
   margin-bottom: 20px;
 }
 
-.gv-filters-container {
+.gvFiltersContainer {
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -131,14 +131,14 @@
   max-width: 1000px;
 }
 
-.gv-filter-button {
+.gvFilterButton {
   background: white;
-  border: 2px solid #F6851F;
+  border: 2px solid #e63946;
   border-radius: 30px;
   padding: 10px 24px;
   font-size: 16px;
   font-weight: 600;
-  color: #F6851F;
+  color: #e63946;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -149,20 +149,20 @@
   justify-content: center;
 }
 
-.gv-filter-button:hover {
-  background: #F6851F;
+.gvFilterButton:hover {
+  background: #e63946;
   color: white;
   transform: translateY(-2px);
 }
 
-.gv-filter-button::after {
+.gvFilterButton::after {
   content: '▼';
   font-size: 12px;
   margin-left: 5px;
 }
 
-.gv-search-btn {
-  background: #F6851F;
+.gvSearchBtn {
+  background: #e63946;
   color: white;
   border: none;
   border-radius: 30px;
@@ -173,12 +173,12 @@
   min-width: 120px;
 }
 
-.gv-search-btn:hover {
-  background: #F6851F;
+.gvSearchBtn:hover {
+  background: #d62839;
   transform: translateY(-2px);
 }
 
-.gv-projects-grid {
+.gvProjectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -187,7 +187,7 @@
   margin: 0 auto;
 }
 
-.gv-project-card {
+.gvProjectCard {
   background: white;
   border-radius: 24px;
   overflow: hidden;
@@ -198,11 +198,11 @@
   flex-direction: column;
 }
 
-.gv-project-card:hover {
+.gvProjectCard:hover {
   transform: translateY(-6px);
 }
 
-.gv-project-image {
+.gvProjectImage {
   width: 100%;
   height: 140px;
   background: #000;
@@ -214,7 +214,7 @@
   font-style: italic;
 }
 
-.gv-project-info {
+.gvProjectInfo {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -222,53 +222,53 @@
   flex: 1;
 }
 
-.gv-project-title {
+.gvProjectTitle {
   font-size: 18px;
   font-weight: bold;
   color: #333;
   margin: 0;
 }
 
-.gv-project-meta-row {
+.gvProjectMetaRow {
   display: flex;
   justify-content: space-between;
   font-size: 13px;
   color: #666;
 }
 
-.gv-project-meta-left {
+.gvProjectMetaLeft {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.gv-project-meta-right {
+.gvProjectMetaRight {
   display: flex;
   flex-direction: column;
   gap: 4px;
   text-align: right;
 }
 
-.gv-project-fee {
-  color: #F6851F;
+.gvProjectFee {
+  color: #e63946;
   font-weight: 600;
 }
 
-.gv-slots-container {
+.gvSlotsContainer {
   display: flex;
   gap: 4px;
   margin-top: 4px;
 }
 
-.gv-slot-bar {
+.gvSlotBar {
   width: 24px;
   height: 6px;
-  background: #F6851F;
+  background: #e63946;
   border-radius: 3px;
 }
 
-.gv-view-details {
-  background: #F6851F;
+.gvViewDetails {
+  background: #e63946;
   color: white;
   border: none;
   border-radius: 8px;
@@ -281,20 +281,20 @@
   transition: background 0.2s ease;
 }
 
-.gv-view-details:hover {
-  background: #F6851F;
+.gvViewDetails:hover {
+  background: #d62839;
 }
 
-.gv-pagination {
+.gvPagination {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 40px;
 }
 
-.gv-page-btn {
+.gvPageBtn {
   background: white;
-  border: 2px solid #F6851F;
+  border: 2px solid #e63946;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -305,81 +305,249 @@
   transition: all 0.2s ease;
 }
 
-.gv-page-btn:hover {
-  background: #F6851F;
+.gvPageBtn:hover {
+  background: #e63946;
   color: white;
 }
 
-.gv-page-btn img {
+.gvPageBtn img {
   width: 24px;
   height: 24px;
-  filter: brightness(0) saturate(100%) invert(34%) sepia(91%) saturate(3000%) hue-rotate(350deg) brightness(95%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(34%) sepia(91%) saturate(3000%)
+    hue-rotate(350deg) brightness(95%) contrast(101%);
 }
 
-.gv-page-btn:hover img {
+.gvPageBtn:hover img {
   filter: brightness(0) invert(1);
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 992px) {
-  .gv-content-split {
+  .gvContentSplit {
     flex-direction: column;
     text-align: center;
     padding: 20px;
     gap: 40px;
   }
-  .gv-text-side,
-  .gv-image-side {
+  .gvTextSide,
+  .gvImageSide {
     max-width: 100%;
     text-align: center;
   }
-  .gv-title-image {
+  .gvTitleImage {
     max-width: 380px;
     margin: 0 auto 20px;
   }
-  .gv-ep-image {
+  .gvEpImage {
     transform: none;
     max-width: 400px;
   }
-  .gv-projects-grid {
+  .gvProjectsGrid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
-  .gv-opportunity-title-img {
+  .gvOpportunityTitleImg {
     max-width: 400px;
   }
-  .gv-filters-container {
+  .gvFiltersContainer {
     flex-direction: column;
     align-items: center;
   }
-  .gv-filter-button,
-  .gv-search-btn {
+  .gvFilterButton,
+  .gvSearchBtn {
     width: 280px;
     justify-content: center;
   }
 }
 
 @media (max-width: 576px) {
-  .gv-opportunity-title-img {
+  .gvOpportunityTitleImg {
     max-width: 300px;
   }
-  .gv-title-image {
+  .gvTitleImage {
     max-width: 300px;
   }
-  .gv-description {
+  .gvDescription {
     font-size: 14px;
   }
-  .gv-ep-image {
+  .gvEpImage {
     max-width: 300px;
   }
-  .gv-filter-button,
-  .gv-search-btn {
+  .gvFilterButton,
+  .gvSearchBtn {
     width: 100%;
     max-width: 280px;
   }
-  .gv-project-info {
+  .gvProjectInfo {
     padding: 16px;
   }
+}
+
+/* --- CAROUSEL DOT STYLES --- */
+.gvCarouselDot {
+  background-color: white;
+  border: 2px solid #f6851f;
+  color: #f6851f;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gvCarouselDot.active {
+  background-color: #f6851f;
+  color: white;
+  border-color: #f6851f;
+}
+
+/* SLOT BAR STYLES */
+.gvSlotEmpty {
+  background: #ccc;
+}
+
+.gvSlotFilled {
+  background: #f6851f;
+}
+
+/* Error style */
+.error {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* === YENİ ANİMASYONLAR === */
+/* Hero slogan */
+.heroSlogan {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(230, 57, 70, 0.2),
+    rgba(214, 40, 57, 0.2)
+  );
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+/* Pulsing effect for volunteer cards */
+@keyframes volunteerPulse {
+  0% {
+    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.15);
+  }
+  50% {
+    box-shadow: 0 8px 35px rgba(230, 57, 70, 0.25);
+  }
+  100% {
+    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.15);
+  }
+}
+
+.gvProjectCard {
+  animation: volunteerPulse 3s infinite ease-in-out;
+}
+
+/* Floating animation for hero section */
+@keyframes volunteerFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.gvHeroContainer {
+  animation: volunteerFloat 6s ease-in-out infinite;
+}
+
+/* Button animation */
+.gvFilterButton,
+.gvSearchBtn,
+.gvViewDetails,
+.gvPageBtn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.gvFilterButton:active,
+.gvSearchBtn:active,
+.gvViewDetails:active,
+.gvPageBtn:active {
+  transform: scale(0.95);
+}
+
+/* Scroll progress indicator */
+.scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  z-index: 1000;
+  transition: width 0.1s;
+}
+
+/* Volunteer için kırmızı */
+.volunteer .scrollProgress {
+  background: linear-gradient(90deg, #e63946, #d62839);
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingSpinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid currentColor;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+/* Fade in animation for sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gvSection {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
